@@ -20,7 +20,7 @@ std.get('/student-route', (req, res) => {
         host: 'localhost',
         user: 'root',
         password: '950082s*S',
-        database: 'mentor_student_portal'
+        database: 'query_portal'
     });
 
     connection.connect((err) => {
@@ -29,8 +29,8 @@ std.get('/student-route', (req, res) => {
     });
 
     const sql_query = `
-        SELECT s.Std_Id, s.Std_Name, s.Std_Email, s.Std_Department, 
-               m.Mentor_Id, m.Mentor_Name, m.Mentor_Email, m.Mentor_Department, 
+        SELECT s.Std_Id, s.Std_Name, s.Std_Email, s.Std_Department, Std_Mobile, Std_Profile_Url,
+               m.Mentor_Id, m.Mentor_Name, m.Mentor_Email, m.Mentor_Department, m.Mentor_Mobile, m.Mentor_Profile_Url, 
                q.Query_Id, q.Queries, q.Query_CT, 
                r.Response_Id, r.Response, r.Response_CT 
         FROM student AS s 
@@ -64,7 +64,7 @@ std.post('/submit-query', (req, res) => {
         host: 'localhost',
         user: 'root',
         password: '950082s*S',
-        database: 'mentor_student_portal'
+        database: 'query_portal'
     });
 
     connection.connect((err) => {

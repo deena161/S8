@@ -17,7 +17,7 @@ const connection = sql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '950082s*S',
-    database: 'mentor_student_portal'
+    database: 'query_portal'
 });
 
 // Connect to the database
@@ -37,9 +37,14 @@ mtr.get('/mentor-route', (req, res) => {
             M.Mentor_Name, 
             M.Mentor_Email, 
             M.Mentor_Department, 
+            M.Mentor_Mobile,
+            M.Mentor_Profile_Url,
             S.Std_Id, 
             S.Std_Name, 
-            S.Std_Email
+            S.Std_Email,
+            S.Std_Department,
+            S.Std_Mobile,
+            S.Std_Profile_Url
         FROM 
             Mentor M 
         LEFT JOIN 

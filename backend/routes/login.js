@@ -33,7 +33,7 @@ app.post('/login', (req, res) => {
             host: 'localhost',
             user: 'root',
             password: '950082s*S',
-            database: 'mentor_student_portal'
+            database: 'query_portal'
         })
 
         connection.connect((err) => {
@@ -98,6 +98,6 @@ console.log("login role: "+role);
 
 
 
-app.listen(3001, () => {
-    console.log("Server is running on 3001");
+app.listen(6001, () => {
+    console.log("Server is running on 6001");
 });
