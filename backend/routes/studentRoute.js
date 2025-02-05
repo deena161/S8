@@ -94,3 +94,5 @@ std.post('/submit-query', (req, res) => {
 module.exports = std;
 
 
+
+

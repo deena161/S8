@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+
+
+.student-details-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.student-details-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.student-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding-left: 50px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.student-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.student-id,
+.student-name,
+.student-email,
+.student-department,
+.student-mobile {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.student-id {
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .student-details-container {
+    padding: 15px;
+  }
+
+  .student-details-title {
+    font-size: 1.5rem;
+  }
+
+  .student-card {
+    padding: 12px;
+  }
+
+  .student-id,
+  .student-name,
+  .student-email,
+  .student-department,
+  .student-mobile {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-details-container {
+    padding: 10px;
+  }
+
+  .student-details-title {
+    font-size: 1.2rem;
+  }
+
+  .student-card {
+    padding: 10px;
+  }
+
+  .student-id,
+  .student-name,
+  .student-email,
+  .student-department,
+  .student-mobile {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+/*===============================================================================================*/
+/* sidebar 3 */
+/* Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-bottom: 65px;
+  /* Space for fixed bottom form */
+}
+
+/* Chat Box (Scrollable Area) */
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 100px;
+}
+
+
+/* Chat Messages */
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+/* Query Bubble */
+.query-bubble {
+  background-color: #DCF8C6; /* Light green background */
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 60%;
+  align-self: flex-start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between elements */
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Student Name - Top Left */
+.query-bubble h4 {
+  align-self: flex-start; /* Align to the left */
+  margin: 0; /* Remove default margin */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Query Text - Center */
+.query-bubble p {
+  text-align: left; /* Center the text */
+  margin: 0; /* Remove default margin */
+  font-size: 14px;
+  color: #555;
+}
+
+.query-bubble .group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Timestamp - Bottom Right */
+.query-bubble .timestamp,.queryid {
+  margin: 0; /* Remove default margin */
+  font-size: 12px;
+  color: #999;
+}
+
+/* Response Bubble */
+.response-bubble {
+  background-color: #EAEAEA;
+  padding: 12px;
+  border-radius: 15px;
+  max-width: 60%;
+  align-self: flex-end;
+  position: relative;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.response-bubble {
+  background-color: #d7dbdd; /* Light green background */
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 60%;
+  align-self: flex-end;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between elements */
+}
+
+.response-bubble h4 {
+  align-self: flex-start; /* Align to the left */
+  margin: 0; /* Remove default margin */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.response-bubble p {
+  text-align: left; /* Center the text */
+  margin: 0; /* Remove default margin */
+  font-size: 14px;
+  color: #555;
+}
+
+.response-bubble .timestamp{
+  align-self: flex-end;
+}
+
+
+/* No Response Message */
+.no-response {
+  color: gray;
+  font-size: 14px;
+  align-self: flex-end;
+}
+
+/* Timestamp */
+.timestamp {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+  display: block;
+}
+
+/* ========================== */
+/* 🎨 Fixed Bottom Form Styles */
+/* ========================== */
+.response-form {
+  position: fixed;
+  bottom: 0;
+  left: 220px;
+  /* Sidebar width when visible */
+  width: calc(100% - 235px);
+  /* Full width minus sidebar */
+  max-width: 100%;
+  background: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #ddd;
+  transition: left 0.3s ease, width 0.3s ease;
+  /* Smooth transition */
+}
+
+/* When sidebar is hidden */
+#sidebar.hide~#content .response-form {
+  left: 60px;
+  /* Adjusted for hidden sidebar */
+  width: calc(100% - 60px);
+  /* Full width minus hidden sidebar */
+}
+
+/* Small Query ID Input */
+.query-id-input {
+  width: 80px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+  color: #212f3d;
+}
+
+/* Response Textarea */
+.response-textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  min-height: 60px;
+  outline: none;
+  color: black;
+}
+
+/* Send Button */
+.send-button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #3C91E6;
+}
+
+.send-button:hover {
+  background-color: #247fda;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* ========================== */
+/* 📱 Responsive Design */
+/* ========================== */
+
+/* For Tablets & Smaller Screens */
+@media (max-width: 1024px) {
+  .response-form {
+    width: 100%;
+    left: 0;
+    /* Full width on smaller screens */
+    padding: 8px;
+  }
+  .chat-box{
+    padding-bottom: 150px;
+  }
+
+  .query-id-input {
+    width: 70px;
+    font-size: 14px;
+  }
+
+  .response-textarea {
+    font-size: 14px;
+  }
+
+  .send-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+/* For Mobile Screens */
+@media (max-width: 768px) {
+  .response-form {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 5px;
+    gap: 0px;
+  }
+
+  .query-id-input,
+  .response-textarea,
+  .send-button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+

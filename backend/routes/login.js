@@ -20,7 +20,6 @@ var user;
 
 
 app.post('/login', (req, res) => {
-    // console.log("Request Result: "+req.body);
     const { userEmail } = req.body;
 
 
@@ -55,7 +54,6 @@ console.log("login role: "+role);
             console.log("Inside Student")
             connection.query(sql_query, (err, res) => {
                 if (err) throw err;
-                // console.log("Database ResultL: "+res);
                 user = res[0];
                 console.log("Student ID: " + res[0].Std_Id);
                 console.log("Student Name: " + res[0].Std_Name);
@@ -68,7 +66,6 @@ console.log("login role: "+role);
             console.log("Inside Mentor")
             connection.query(sql_query, (err, res) => {
                 if (err) throw err;
-                // console.log("Database ResultL: "+res);
                 user = res[0];
                 console.log("Mentor ID: " + res[0].Mentor_Id);
                 console.log("Mentor Name: " + res[0].Mentor_Name);

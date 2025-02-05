@@ -1,0 +1,136 @@
+/* Login.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Main container with a clean, centered layout */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f4f8; /* Light gray background for a clean look */
+    font-family: 'Roboto', sans-serif; /* Elegant and modern font */
+    color: #333; /* Dark text for readability */
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  
+  .container:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  /* Container to allow scrolling for content if it overflows */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto; /* Allow scrolling if needed */
+  }
+  
+  /* Logo styling with rounded edges and margin */
+  /* .logo-container {
+    margin-bottom: 20px;
+  } */
+  
+  .logo {
+    width: 280px; /* Adjusted logo size */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Main heading (Login title) */
+  .login-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Subheading text */
+  .login-subheading {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #797d7f; /* Lighter color for subheading */
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  .login-display{
+    color: #797d7f; 
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    margin-top: 20px;
+  }
+  
+  /* Styling for the Google sign-in button */
+  .google-sign-in-button {
+    width: 100%;
+    max-width: 400px; /* Button size */
+    margin-top: 20px;
+
+  }
+
+  .nsm7Bb-HzV7m-LgbsSe-BPrWId{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #626567;
+  }
+
+
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 15px;
+    }
+  
+    .login-heading {
+      font-size: 1.2rem;
+    }
+  
+    .login-subheading {
+      font-size: 1.4rem;
+    }
+  
+    .google-sign-in-button {
+      max-width: 350px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 10px;
+    }
+  
+    .login-heading {
+      font-size: 1.3rem;
+    }
+  
+    .login-subheading {
+      font-size: 1.1rem;
+    }
+  
+    .google-sign-in-button {
+      max-width: 300px;
+    }
+  }
+  
