@@ -687,7 +687,7 @@ function MentorDashboard() {
 
         {sideBar3 && (
           <main className="chat-container">
-            <div className="chat-box">
+            <div className="chat-box">  
               {[...mentorData.queries].reverse().map((item) => (
                 item.Query_Id ? (
                   <div key={item.Query_Id} className="chat-message">
@@ -741,3 +741,10 @@ function MentorDashboard() {
 }
 
 export default MentorDashboard;
+
+
+
+
+
+
+

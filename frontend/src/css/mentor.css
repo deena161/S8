@@ -79,6 +79,9 @@ li { list-style: none; }
 }
 
 
+
+
+
 .fa-people-group{
   min-width: 50px;
   font-size: 23px;
@@ -177,7 +180,6 @@ li { list-style: none; }
     width: calc(100% - 60px);
     left: 60px;
 }
-
 
 #content nav .switch-mode {
     display: block;
